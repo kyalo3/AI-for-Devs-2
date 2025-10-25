@@ -11,10 +11,10 @@ export default function PollList({ polls }: Props) {
   }
 
   return (
-    <div className="grid gap-4">
+    <>
       {polls.map((p) => (
-        <PollCard key={p.id} id={p.id} title={p.title} votes={p.votes ?? 0} />
+        <PollCard key={p.id} {...p} />
       ))}
-    </div>
+    </>
   );
 }
